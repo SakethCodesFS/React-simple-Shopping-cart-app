@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live link
+Open [https://react-simple-shopping-cart-app.onrender.com/] to view the hosted shopping cart application
+
 ## Available Scripts
 
 In the project directory, you can run:
