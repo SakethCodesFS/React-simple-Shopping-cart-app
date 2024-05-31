@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import ProductList from './components/ProductList';
+import Checkout from './components/Checkout';
+import Cart from './components/Cart';
+import Header from './components/Header';
+import FlashMessage from './components/FlashMessage';
+import { CartContext } from './context/CartContext';
 
-function App() {
+const App = () => {
+  const { flashMessage, closeFlashMessage } = useContext(CartContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <FlashMessage message={flashMessage} onClose={closeFlashMessage} />
+      <Routes>
+        <Route path="/" element={<ProductList />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/cart" element={<Cart />} />
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;

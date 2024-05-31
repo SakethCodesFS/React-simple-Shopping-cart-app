@@ -1,0 +1,66 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+header {
+  @apply bg-blue-500 text-white p-4 shadow-md;
+}
+
+.container {
+  @apply mx-auto px-4;
+}
+
+nav a {
+  @apply text-white no-underline hover:underline mx-2;
+}
+
+form {
+  @apply bg-white p-6 rounded-lg shadow-lg;
+}
+
+form div {
+  @apply mb-4;
+}
+
+form label {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+}
+
+form input {
+  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring;
+}
+
+form button {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring;
+}
+
+.product-card {
+  @apply bg-white p-4 rounded-lg shadow-lg m-4 max-w-xs overflow-hidden relative;
+}
+
+.product-card img {
+  @apply w-full h-48 object-cover;
+}
+
+.cart-list {
+  @apply bg-white p-4 rounded-lg shadow-lg m-4;
+}
+
+.flash-message {
+  @apply bg-green-500 text-white p-4 rounded shadow-lg;
+}
+
+.flash-message button {
+  @apply ml-4 text-white font-bold;
+}
+
+.modal {
+  /* Removed `@apply fixed` here */
+  @apply bg-gray-800 bg-opacity-75 flex items-center justify-center;
+}
+
+.modal-content {
+  @apply bg-white p-6 rounded-lg shadow-lg max-w-lg w-full;
+}
